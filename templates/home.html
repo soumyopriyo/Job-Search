@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%include "decorations.html"%}
+</head>
+<body>
+    {%include "navbar.html"%}
+    <img src="static\bannerm.jpg" alt="searching job image" class="banner">
+    <div class="container">
+        <h1>JOB Search</h1>
+        <div class="row">
+            <div class="col-md-6">
+            <p class="about lead"> Founded in the early days of the internet boom (circa 2000), JOB Search is a pioneer in connecting
+                top talent with exciting career opportunities. We recognized the potential of the online space to revolutionize job
+                searching and recruitment, and we built our platform with a vision to make it easier and more efficient for both 
+                candidates and employers.
+                Throughout the past two decades, we haven't just kept pace with the evolving landscape of online recruitment;
+                we've actively helped shape it. We've consistently implemented new technologies and features, such as advanced 
+                search filters, targeted job matching algorithms, and mobile-friendly platform access.
+                Today, JOB Search is a leading online job board, serving millions of users globally. We are committed to providing a 
+                seamless and successful experience for both job seekers and employers, fostering meaningful connections that lead to fulfilling careers.
+            </p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+                <img src="static\new.jpg" alt="people working" style="height: 350px;border-radius: 4px; margin-top: 10px;">
+            </div>
+        </div>
+        <h2>Job Openings</h2>
+            {%for job in jobs%}
+                {%include 'jobitem.html'%}
+            {%endfor%}
+        <!-- <div class="text-center">
+            <a class=" btn btn-primary btn-lg" href=" mailto:contact_jobsearch@JOBSearch.com?subject=My%20Queries.&body=Your%20name%3A%3CName%20Here%3E%0D%0AYour%20Queries%3A%3CYour%20Questions%3E%0D%0AYou%20can%20contact%20me%20in%20delta0669%40gmail.com ">Contact Us</a>
+        </div> -->
+    </div>
+    {%include "footer.html"%}
+</body>
+</html>
